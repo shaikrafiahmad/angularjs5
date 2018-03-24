@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { saveAs } from 'file-saver'
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   myEvent(data) {
-    alert("Angularjs 5");
-    console.log(data);
+    alert(data);
+    var blob = new window.Blob(["HELLO"], {type:"application/pdf"});
+    saveAs(blob, "test.pdf")
   }
 }
