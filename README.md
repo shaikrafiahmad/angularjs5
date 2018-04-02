@@ -13,20 +13,13 @@ npm install -g @angular/cli
 After installation check version of angular 
 
 # ng -v it will look like this
-
- / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
-  / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
- / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
-/_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
-               |___/
-
-Angular CLI: 1.7.3
-Node: 9.9.0
-OS: win32 x64
-Angular: error
-... animations, cli, common, compiler, compiler-cli, core, forms
-... http, language-service, platform-browser
-... platform-browser-dynamic, router
+* Angular CLI: 1.7.3
+* Node: 9.9.0
+* OS: win32 x64
+* Angular: error
+* animations, cli, common, compiler, compiler-cli, core, forms
+* http, language-service, platform-browser
+* platform-browser-dynamic, router
 
 # Create folder by using the below command it will create all the folder structure of the angular 5
 
