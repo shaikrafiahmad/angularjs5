@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { saveAs } from 'file-saver'
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import * as _ from 'underscore';
+import { saveAs } from 'file-saver';
+import * as jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +9,29 @@ import { saveAs } from 'file-saver'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  myEvent(data) {
-    alert(data);
-    var blob = new window.Blob(["HELLO"], {type:"application/pdf"});
-    saveAs(blob, "test.pdf")
+
+  @ViewChild('content') content: ElementRef;
+  public downloadPDF() {
+    let doc = new jsPDF();
+
+    let specialElementHandler = {
+      '#editor': function (element, renderer) {
+        return true;
+      }
+    };
+    let content = this.content.nativeElement;
+    doc.fromHTML(content.innerHTML, 15, 15, {
+      'widht': 190,
+      'elementHandler': specialElementHandler
+    });
+
+    doc.save('test.PDF');
+    doc.save('test.doc');
+  }
+  private modals: any[] = [];
+  open(id: string) {
+    // open modal specified by id
+    let modal = _.findWhere(this.modals, { id: id });
+    modal.open();
   }
 }

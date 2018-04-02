@@ -1,112 +1,145 @@
 <div id="cv" class="instaFade">
-	<div class="mainDetails">
-		<div id="headshot" class="quickFade">
-			<img src="headshot.jpg" alt="Alan Smith" />
-		</div>
-		
-		<div id="name">
-      <input type="text" placeholder="Enter Name" [(ngModel)]="name">
-			<h1 class="quickFade delayTwo">Joe Bloggs</h1>
-			<h2 class="quickFade delayThree">Job Title</h2>
-		</div>
-		
-		<div id="contactDetails" class="quickFade delayFour">
-			<ul>
-				<li>e: <a href="mailto:joe@bloggs.com" target="_blank">joe@bloggs.com</a></li>
-				<li>w: <a href="http://www.bloggs.com">www.bloggs.com</a></li>
-				<li>m: 01234567890</li>
-			</ul>
-		</div>
-		<div class="clear"></div>
-	</div>
-	
-	<div id="mainArea" class="quickFade delayFive">
-		<section>
-			<article>
-				<div class="sectionTitle">
-					<h1>Personal Profile</h1>
-				</div>
-				
-				<div class="sectionContent">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor metus, interdum at scelerisque in, porta at lacus. Maecenas dapibus luctus cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</div>
-			</article>
-			<div class="clear"></div>
-		</section>
-		
-		
-		<section>
-			<div class="sectionTitle">
-				<h1>Work Experience</h1>
-			</div>
-			
-			<div class="sectionContent">
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">April 2011 - Present</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
-				
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">Janruary 2007 - March 2011</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
-				
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">October 2004 - December 2006</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
-			</div>
-			<div class="clear"></div>
-		</section>
-		
-		
-		<section>
-			<div class="sectionTitle">
-				<h1>Key Skills</h1>
-			</div>
-			
-			<div class="sectionContent">
-				<ul class="keySkills">
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-				</ul>
-			</div>
-			<div class="clear"></div>
-		</section>
-		
-		
-		<section>
-			<div class="sectionTitle">
-				<h1>Education</h1>
-			</div>
-			
-			<div class="sectionContent">
-				<article>
-					<h2>College/University</h2>
-					<p class="subDetails">Qualification</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
-				</article>
-				
-				<article>
-					<h2>College/University</h2>
-					<p class="subDetails">Qualification</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
-				</article>
-			</div>
-			<div class="clear"></div>
-		</section>
-		
-  </div>
-  <button type="button" value="Export as PDF" (click)="myEvent(name)">Export as PDF</button>
-</div>
+  <div class="mainDetails">
+    <!-- <div id="headshot" class="quickFade">
+      <img src="headshot.jpg" alt="Alan Smith" />
+    </div> -->
 
-<router-outlet></router-outlet>
+    <div id="content" #content>
+			<input type="text" placeholder="Enter Name" [(ngModel)]="name">
+      <h1 class="quickFade delayTwo">Joe Bloggs</h1>
+      <h2 class="quickFade delayThree">Job Title</h2>
+
+
+      <div id="contactDetails" class="quickFade delayFour">
+        <ul>
+          <li>e:
+            <a href="mailto:joe@bloggs.com" target="_blank">joe@bloggs.com</a>
+          </li>
+          <li>w:
+            <a href="http://www.bloggs.com">www.bloggs.com</a>
+          </li>
+          <li>m: 01234567890</li>
+        </ul> 
+      </div>
+      <div class="clear"></div>
+
+      <div id="mainArea" class="quickFade delayFive">
+        <section>
+          <article>
+            <div class="sectionTitle">
+              <h1>Personal Profile</h1>
+            </div>
+
+            <div class="sectionContent">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor metus, interdum at scelerisque in, porta
+                at lacus. Maecenas dapibus luctus cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim.
+                Proin id sapien quis libero interdum porttitor.</p>
+            </div>
+          </article>
+          <div class="clear"></div>
+        </section>
+
+
+        <section>
+          <div class="sectionTitle">
+            <h1>Work Experience</h1>
+          </div>
+
+          <div class="sectionContent">
+            <article>
+              <h2>Job Title at Company</h2>
+              <p class="subDetails">April 2011 - Present</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur
+                non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+            </article>
+
+            <article>
+              <h2>Job Title at Company</h2>
+              <p class="subDetails">Janruary 2007 - March 2011</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur
+                non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+            </article>
+
+            <article>
+              <h2>Job Title at Company</h2>
+              <p class="subDetails">October 2004 - December 2006</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur
+                non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+            </article>
+          </div>
+          <div class="clear"></div>
+        </section>
+
+
+        <section>
+          <div class="sectionTitle">
+            <h1>Key Skills</h1>
+          </div>
+
+          <div class="sectionContent">
+            <ul class="keySkills">
+              <li>A Key Skill</li>
+              <li>A Key Skill</li>
+              <li>A Key Skill</li>
+              <li>A Key Skill</li>
+              <li>A Key Skill</li>
+              <li>A Key Skill</li>
+              <li>A Key Skill</li>
+              <li>A Key Skill</li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </section>
+
+
+        <section>
+          <div class="sectionTitle">
+            <h1>Education</h1>
+          </div>
+
+          <div class="sectionContent">
+            <article>
+              <h2>College/University</h2>
+              <p class="subDetails">Qualification</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur
+                non consequat enim.</p>
+            </article>
+
+            <article>
+              <h2>College/University</h2>
+              <p class="subDetails">Qualification</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur
+                non consequat enim.</p>
+            </article>
+          </div>
+          <div class="clear"></div>
+        </section>
+
+      </div>
+      <button type="button" value="Export as PDF" (click)="downloadPDF()">Export as PDF</button>
+    </div>
+  </div>
+
+
+	<div class="col-md-6 col-md-offset-3">
+			<h1>Home</h1>
+			<p>{{bodyText}}</p>
+			<button (click)="openModal('custom-modal-1')">Open Modal 1</button>
+			<button (click)="openModal('custom-modal-2')">Open Modal 2</button>
+	</div>
+
+	<modal id="custom-modal-1">
+			<div class="modal">
+					<div class="modal-body">
+							<h1>A Custom Modal!</h1>
+							<p>
+									Home page text: <input type="text" [(ngModel)]="bodyText" />
+							</p>
+							<button (click)="closeModal('custom-modal-1');">Close</button>
+					</div>
+			</div>
+			<div class="modal-background"></div>
+	</modal>
+
+  <router-outlet></router-outlet>
