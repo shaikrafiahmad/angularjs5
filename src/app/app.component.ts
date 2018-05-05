@@ -1,4 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Router, Routes } from '@angular/router'
+import { DetailsComponent } from './details/app.details.component'
 import * as _ from 'underscore';
 import { saveAs } from 'file-saver';
 import * as jsPDF from 'jspdf';
@@ -8,6 +10,8 @@ import * as jsPDF from 'jspdf';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
+
 export class AppComponent {
 
   @ViewChild('content') content: ElementRef;

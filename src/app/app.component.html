@@ -5,7 +5,6 @@
     </div> -->
 
     <div id="content" #content>
-			<input type="text" placeholder="Enter Name" [(ngModel)]="name">
       <h1 class="quickFade delayTwo">Joe Bloggs</h1>
       <h2 class="quickFade delayThree">Job Title</h2>
 
@@ -19,7 +18,7 @@
             <a href="http://www.bloggs.com">www.bloggs.com</a>
           </li>
           <li>m: 01234567890</li>
-        </ul> 
+        </ul>
       </div>
       <div class="clear"></div>
 
@@ -117,29 +116,11 @@
         </section>
 
       </div>
-      <button type="button" value="Export as PDF" (click)="downloadPDF()">Export as PDF</button>
+      <!-- <button type="button" value="Export as PDF" (click)="downloadPDF()">Export as PDF</button> -->
     </div>
+    <div>
+      <a routerLink="login" name="next">Next</a>
+    </div>
+    
+    <router-outlet></router-outlet>
   </div>
-
-
-	<div class="col-md-6 col-md-offset-3">
-			<h1>Home</h1>
-			<p>{{bodyText}}</p>
-			<button (click)="openModal('custom-modal-1')">Open Modal 1</button>
-			<button (click)="openModal('custom-modal-2')">Open Modal 2</button>
-	</div>
-
-	<modal id="custom-modal-1">
-			<div class="modal">
-					<div class="modal-body">
-							<h1>A Custom Modal!</h1>
-							<p>
-									Home page text: <input type="text" [(ngModel)]="bodyText" />
-							</p>
-							<button (click)="closeModal('custom-modal-1');">Close</button>
-					</div>
-			</div>
-			<div class="modal-background"></div>
-	</modal>
-
-  <router-outlet></router-outlet>
