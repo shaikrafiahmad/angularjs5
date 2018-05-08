@@ -6,26 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { DetailsComponent } from '../app/details/app.details.component';
+import { TemplatesComponent } from "../app/templates/app.templates.component";
 import {ModalModule} from "ng2-modal";
 import { RouterModule, Routes } from '@angular/router'
-
-const routes: Routes = [
-  { path: 'login', component: DetailsComponent }
-]
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetailsComponent
+    DetailsComponent,
+    TemplatesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ModalModule,
-    RouterModule.forRoot(
-      routes,
-    )
+    ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
