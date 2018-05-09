@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Router, Routes } from '@angular/router'
 import { DetailsComponent } from './details/app.details.component'
+import { TemplatesComponent } from './templates/app.templates.component'
 import * as _ from 'underscore';
 import { saveAs } from 'file-saver';
 import * as jsPDF from 'jspdf';
