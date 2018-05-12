@@ -1,7 +1,6 @@
-
-<table style="border: 1px solid red; border-radius: 10px">
-  <div>
-    <input type="text">
-  </div>
-</table>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <input name="name" ngModel required #first="ngModel">
+  <input name="lastname" ngModel>
+  <button type="submit">Submit</button>
+</form>
 <router-outlet></router-outlet>

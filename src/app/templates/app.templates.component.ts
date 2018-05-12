@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router'
+import { DetailsComponent } from '../details/app.details.component'
 
 
 @Component({
@@ -10,10 +11,11 @@ import { Router } from '@angular/router'
 
 export class TemplatesComponent {
     constructor(private router: Router) {
-
     }
     templateWrite() {
         this.router.navigate(['login']);
     }
-
+    data = localStorage.getItem("dynamic");
+    test = localStorage.getItem("test"); 
+    lastname = localStorage.getItem("lastname");  
 }
