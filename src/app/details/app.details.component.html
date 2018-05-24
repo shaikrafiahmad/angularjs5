@@ -1,6 +1,41 @@
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-  <input name="name" ngModel required #first="ngModel">
-  <input name="lastname" ngModel>
+  <div>Name:
+    <input name="name" ngModel required #first="ngModel">
+  </div>
+  <div>Lastname:
+    <input name="lastname" ngModel>
+  </div>
+  <div>Mobile:
+    <input name="mobile" ngModel>
+  </div>
+  <div>Email:
+      <input name="email" ngModel>
+    </div>
+  <div>Date:
+    <input name="date" ngModel>
+  </div>
+  <div>Profile Summary :
+    <textarea name="summary" ngModel id="Profile" cols="30" rows="10"></textarea>
+  </div>
+  Education:
+  <table style="border: 1px solid black">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Graduation</td>
+        <td>Year of pass</td>
+        <td>Percentage</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input name="name" ngModel></td>
+        <td><input name="graduation" ngModel></td>
+        <td><input name="yearofpass" ngModel></td>
+        <td><input name="percentage" ngModel></td>
+      </tr>
+    </tbody>
+  </table>
   <button type="submit">Submit</button>
 </form>
 <router-outlet></router-outlet>

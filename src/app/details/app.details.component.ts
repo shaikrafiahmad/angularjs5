@@ -14,13 +14,22 @@ export class DetailsComponent {
   onSubmit(f: NgForm) {
     console.log(f.valid);
     if (f.valid == true) {
-      console.log(f.value)
+      console.log(f.value);
+      let object = {};
       let data = "dynamic";
-      let name = f.value.name
-      let lastname = f.value.lastname
-      localStorage.setItem("dynamic", data)
-      localStorage.setItem("test", name)
-      localStorage.setItem("lastname", lastname)
+      let name = f.value.name;
+       let lastname = f.value.lastname;
+       let mobile = f.value.mobile;
+       let email = f.value.email;
+       let date = f.value.date;
+       let profileSummary = f.value.summary;
+      localStorage.setItem("dynamic", data);
+      localStorage.setItem("name", name);
+      localStorage.setItem("lastname", lastname);
+      localStorage.setItem("mobile", mobile);
+      localStorage.setItem("email", email);
+      localStorage.setItem('date', date);
+      localStorage.setItem('profile', profileSummary);
       this.router.navigate(['templates']);
     }
   }

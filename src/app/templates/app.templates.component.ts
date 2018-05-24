@@ -19,8 +19,12 @@ export class TemplatesComponent {
         this.router.navigate(['login']);
     }
     data = localStorage.getItem("dynamic");
-    test = localStorage.getItem("test"); 
+    name = localStorage.getItem("name"); 
     lastname = localStorage.getItem("lastname");  
+    email = localStorage.getItem("email"); 
+    mobile = localStorage.getItem("mobile");  
+    date = localStorage.getItem("date");
+    summary = localStorage.getItem("profile");
 
     @ViewChild('content') content: ElementRef;
     public downloadPDF() {
@@ -39,6 +43,14 @@ export class TemplatesComponent {
   
       doc.save('test.PDF');
       doc.save('test.doc');
+      localStorage.removeItem('dynamic')
+      localStorage.removeItem('name')
+      localStorage.removeItem('lastname')
+      localStorage.removeItem('email')
+      localStorage.removeItem('mobile')
+      localStorage.removeItem('date')
+      localStorage.removeItem('profile')
+      this.router.navigate(['template'])
     }
     private modals: any[] = [];
     open(id: string) {
